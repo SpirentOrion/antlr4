@@ -37,7 +37,7 @@ public class ATNConfig: Hashable, CustomStringConvertible {
     /// with this config.  We track only those contexts pushed during
     /// execution of the ATN simulator.
     /// 
-    public final var context: PredictionContext?
+    public internal(set) final var context: PredictionContext?
 
     /// 
     /// We cannot execute predicates dependent upon local context unless
@@ -62,31 +62,14 @@ public class ATNConfig: Hashable, CustomStringConvertible {
     /// _org.antlr.v4.runtime.atn.ATNConfigSet#add(org.antlr.v4.runtime.atn.ATNConfig, DoubleKeyMap)_ method are
     /// __completely__ unaffected by the change.
     /// 
-    public final var reachesIntoOuterContext: Int = 0
-    //=0 intital by janyou
-
+    public internal(set) final var reachesIntoOuterContext: Int = 0
 
     public final let semanticContext: SemanticContext
-
-    public init(_ old: ATNConfig) {
-        // dup
-        self.state = old.state
-        self.alt = old.alt
-        self.context = old.context
-        self.semanticContext = old.semanticContext
-        self.reachesIntoOuterContext = old.reachesIntoOuterContext
-    }
-
-    public convenience init(_ state: ATNState,
-                            _ alt: Int,
-                            _ context: PredictionContext?) {
-        self.init(state, alt, context, SemanticContext.NONE)
-    }
 
     public init(_ state: ATNState,
                 _ alt: Int,
                 _ context: PredictionContext?,
-                _ semanticContext: SemanticContext) {
+                _ semanticContext: SemanticContext = SemanticContext.NONE) {
         self.state = state
         self.alt = alt
         self.context = context
@@ -150,47 +133,36 @@ public class ATNConfig: Hashable, CustomStringConvertible {
     /// 
 
     public var hashValue: Int {
-        var hashCode: Int = MurmurHash.initialize(7)
+        var hashCode = MurmurHash.initialize(7)
         hashCode = MurmurHash.update(hashCode, state.stateNumber)
         hashCode = MurmurHash.update(hashCode, alt)
         hashCode = MurmurHash.update(hashCode, context)
         hashCode = MurmurHash.update(hashCode, semanticContext)
-        hashCode = MurmurHash.finish(hashCode, 4)
-        return hashCode
+        return MurmurHash.finish(hashCode, 4)
 
     }
 
-    public func toString() -> String {
-        return description
-    }
     public var description: String {
         //return "MyClass \(string)"
         return toString(nil, true)
     }
-    public func toString<T:ATNSimulator>(_ recog: Recognizer<T>?, _ showAlt: Bool) -> String {
-        let buf: StringBuilder = StringBuilder()
-        buf.append("(")
-        buf.append(state)
+    public func toString<T>(_ recog: Recognizer<T>?, _ showAlt: Bool) -> String {
+        var buf = "(\(state)"
         if showAlt {
-            buf.append(",")
-            buf.append(alt)
+            buf += ",\(alt)"
         }
-        
-        if context != nil {
-            buf.append(",[")
-            buf.append(context!)
-            buf.append("]")
+        if let context = context {
+            buf += ",[\(context)]"
         }
-        
         if semanticContext != SemanticContext.NONE {
-            buf.append(",")
-            buf.append(semanticContext)
+            buf += ",\(semanticContext)"
         }
-        if getOuterContextDepth() > 0 {
-            buf.append(",up=").append(getOuterContextDepth())
+        let outerDepth = getOuterContextDepth()
+        if outerDepth > 0 {
+            buf += ",up=\(outerDepth)"
         }
-        buf.append(")")
-        return buf.toString()
+        buf += ")"
+        return buf
     }
 }
 

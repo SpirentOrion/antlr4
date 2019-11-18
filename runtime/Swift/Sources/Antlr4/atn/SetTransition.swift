@@ -11,7 +11,7 @@
 /// 
 
 public class SetTransition: Transition, CustomStringConvertible {
-    public final var set: IntervalSet
+    public let set: IntervalSet
 
     // TODO (sam): should we really allow null here?
     public init(_ target: ATNState, _ set: IntervalSet) {
@@ -26,10 +26,7 @@ public class SetTransition: Transition, CustomStringConvertible {
     }
 
     override
-    /// 
-    /// /old label()
-    /// 
-    public func labelIntervalSet() -> IntervalSet {
+    public func labelIntervalSet() -> IntervalSet? {
         return set
     }
 

@@ -12,7 +12,7 @@
 /// 
 
 public final class PrecedencePredicateTransition: AbstractPredicateTransition, CustomStringConvertible {
-    public final var precedence: Int
+    public let precedence: Int
 
     public init(_ target: ATNState, _ precedence: Int) {
 
@@ -42,9 +42,4 @@ public final class PrecedencePredicateTransition: AbstractPredicateTransition, C
     public var description: String {
         return "\(precedence)  >= _p"
     }
-
-    public func toString() -> String {
-        return description
-    }
-
 }

@@ -11,7 +11,7 @@ public class ArrayPredictionContext: PredictionContext {
     /// from _#EMPTY_ and non-empty. We merge _#EMPTY_ by using null parent and
     /// returnState == _#EMPTY_RETURN_STATE_.
     /// 
-    public final var parents: [PredictionContext?]
+    public private(set) final var parents: [PredictionContext?]
 
     /// 
     /// Sorted for merge, no duplicates; if present,
@@ -58,28 +58,25 @@ public class ArrayPredictionContext: PredictionContext {
         if isEmpty() {
             return "[]"
         }
-        let buf: StringBuilder = StringBuilder()
-        buf.append("[")
-        let length = returnStates.count
-
-        for i in 0..<length {
+        var buf = "["
+        for (i, returnState) in returnStates.enumerated() {
             if i > 0 {
-                buf.append(", ")
+                buf += ", "
             }
-            if returnStates[i] == PredictionContext.EMPTY_RETURN_STATE {
-                buf.append("$")
+            if returnState == PredictionContext.EMPTY_RETURN_STATE {
+                buf += "$"
                 continue
             }
-            buf.append(returnStates[i])
-            if parents[i] != nil {
-                buf.append(" ")
-                buf.append(parents[i].debugDescription)
-            } else {
-                buf.append("null")
+            buf += "\(returnState)"
+            if let parent = parents[i] {
+                buf += " \(parent)"
+            }
+            else {
+                buf += "null"
             }
         }
-        buf.append("]")
-        return buf.toString()
+        buf += "]"
+        return buf
     }
 
     internal final func combineCommonParents() {

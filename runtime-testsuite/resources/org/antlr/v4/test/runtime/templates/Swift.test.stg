@@ -1,6 +1,6 @@
-writeln(s) ::= <<print(<s>)>>
+writeln(s) ::= <<print((<s>) ?? "nil")>>
 
-write(s) ::= <<print(<s>, terminator: "")>>
+write(s) ::= <<print((<s>) ?? "nil", terminator: "")>>
 
 False() ::= "false"
 
@@ -14,6 +14,8 @@ Cast(t,v) ::= "((<v> as! <t>))"
 
 Append(a,b) ::= "<a> + <b>"
 
+AppendStr(a,b) ::= <%<Append(a,b)>%>
+
 Concat(a,b) ::= "<a><b>"
 
 DeclareLocal(s,v) ::= "var <s> = <v>"
@@ -25,6 +27,12 @@ AssignLocal(s,v) ::= "<s> = <v>"
 InitIntMember(n,v) ::= <%var <n> = <v>%>
 
 InitBooleanMember(n,v) ::= <%var <n> = <v>%>
+
+InitIntVar(n,v) ::= <%<InitIntMember(n,v)>%>
+
+IntArg(n) ::= "int <n>"
+
+VarRef(n) ::= "<n>"
 
 GetMember(n) ::= <%self.<n>%>
 
@@ -72,7 +80,7 @@ TokenStartColumnEquals(i) ::= <%self._tokenStartCharPositionInLine == <i>%>
 
 ImportListener(X) ::= ""
 
-GetExpectedTokenNames() ::= "try self.getExpectedTokens().toString(self.tokenNames)"
+GetExpectedTokenNames() ::= "try self.getExpectedTokens().toString(self.getVocabulary())"
 
 RuleInvocationStack() ::= "getRuleInvocationStack().description.replacingOccurrences(of: \"\\\"\", with: \"\")"
 
@@ -95,6 +103,8 @@ func Property() -> Bool {
 ParserPropertyCall(parser, property) ::= <<
 <parser>.<property>
 >>
+
+PositionAdjustingLexerDef() ::= ""
 
 PositionAdjustingLexer() ::= <<
 

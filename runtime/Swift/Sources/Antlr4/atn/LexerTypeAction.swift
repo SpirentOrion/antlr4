@@ -14,7 +14,7 @@
 /// 
 
 public class LexerTypeAction: LexerAction, CustomStringConvertible {
-    fileprivate final var type: Int
+    fileprivate let type: Int
 
     /// 
     /// Constructs a new `type` action with the specified token type value.
@@ -64,7 +64,7 @@ public class LexerTypeAction: LexerAction, CustomStringConvertible {
 
     override
     public var hashValue: Int {
-        var hash: Int = MurmurHash.initialize()
+        var hash = MurmurHash.initialize()
         hash = MurmurHash.update(hash, getActionType().rawValue)
         hash = MurmurHash.update(hash, type)
         return MurmurHash.finish(hash, 2)

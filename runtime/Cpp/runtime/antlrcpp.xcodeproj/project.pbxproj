@@ -848,6 +848,12 @@
 		27B36AC91DACE7AF0069C868 /* RuleContextWithAltNum.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B36AC51DACE7AF0069C868 /* RuleContextWithAltNum.h */; };
 		27B36ACA1DACE7AF0069C868 /* RuleContextWithAltNum.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B36AC51DACE7AF0069C868 /* RuleContextWithAltNum.h */; };
 		27B36ACB1DACE7AF0069C868 /* RuleContextWithAltNum.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B36AC51DACE7AF0069C868 /* RuleContextWithAltNum.h */; };
+		27C375841EA1059C00B5883C /* InterpreterDataReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27C375821EA1059C00B5883C /* InterpreterDataReader.cpp */; };
+		27C375851EA1059C00B5883C /* InterpreterDataReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27C375821EA1059C00B5883C /* InterpreterDataReader.cpp */; };
+		27C375861EA1059C00B5883C /* InterpreterDataReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27C375821EA1059C00B5883C /* InterpreterDataReader.cpp */; };
+		27C375871EA1059C00B5883C /* InterpreterDataReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C375831EA1059C00B5883C /* InterpreterDataReader.h */; };
+		27C375881EA1059C00B5883C /* InterpreterDataReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C375831EA1059C00B5883C /* InterpreterDataReader.h */; };
+		27C375891EA1059C00B5883C /* InterpreterDataReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C375831EA1059C00B5883C /* InterpreterDataReader.h */; };
 		27D414521DEB0D3D00D0F3F9 /* IterativeParseTreeWalker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27D414501DEB0D3D00D0F3F9 /* IterativeParseTreeWalker.cpp */; };
 		27D414531DEB0D3D00D0F3F9 /* IterativeParseTreeWalker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27D414501DEB0D3D00D0F3F9 /* IterativeParseTreeWalker.cpp */; };
 		27D414541DEB0D3D00D0F3F9 /* IterativeParseTreeWalker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27D414501DEB0D3D00D0F3F9 /* IterativeParseTreeWalker.cpp */; };
@@ -1185,8 +1191,6 @@
 		27745EFB1CE49C000067C6A3 /* RuntimeMetaData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RuntimeMetaData.cpp; sourceTree = "<group>"; wrapsLines = 0; };
 		27745EFC1CE49C000067C6A3 /* RuntimeMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeMetaData.h; sourceTree = "<group>"; };
 		27874F1D1CCB7A0700AF1C53 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		278E313E1D9D6534001C28F9 /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
-		278E31401D9D6534001C28F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2793DC841F08083F00A84290 /* TokenSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TokenSource.cpp; sourceTree = "<group>"; };
 		2793DC881F08087500A84290 /* Chunk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Chunk.cpp; sourceTree = "<group>"; };
 		2793DC8C1F08088F00A84290 /* ParseTreeListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParseTreeListener.cpp; sourceTree = "<group>"; };
@@ -1204,6 +1208,8 @@
 		27AC52CF1CE773A80093AAAB /* antlr4-runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "antlr4-runtime.h"; sourceTree = "<group>"; };
 		27B36AC41DACE7AF0069C868 /* RuleContextWithAltNum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RuleContextWithAltNum.cpp; sourceTree = "<group>"; };
 		27B36AC51DACE7AF0069C868 /* RuleContextWithAltNum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleContextWithAltNum.h; sourceTree = "<group>"; };
+		27C375821EA1059C00B5883C /* InterpreterDataReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InterpreterDataReader.cpp; sourceTree = "<group>"; };
+		27C375831EA1059C00B5883C /* InterpreterDataReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpreterDataReader.h; sourceTree = "<group>"; };
 		27D414501DEB0D3D00D0F3F9 /* IterativeParseTreeWalker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IterativeParseTreeWalker.cpp; sourceTree = "<group>"; };
 		27D414511DEB0D3D00D0F3F9 /* IterativeParseTreeWalker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterativeParseTreeWalker.h; sourceTree = "<group>"; };
 		27DB448B1D045537007E790B /* XPath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XPath.cpp; sourceTree = "<group>"; wrapsLines = 0; };
@@ -1523,6 +1529,8 @@
 		276E5CC91CDB57AA003FF4B4 /* misc */ = {
 			isa = PBXGroup;
 			children = (
+				27C375821EA1059C00B5883C /* InterpreterDataReader.cpp */,
+				27C375831EA1059C00B5883C /* InterpreterDataReader.h */,
 				276E5CCA1CDB57AA003FF4B4 /* Interval.cpp */,
 				276E5CCB1CDB57AA003FF4B4 /* Interval.h */,
 				276E5CCC1CDB57AA003FF4B4 /* IntervalSet.cpp */,
@@ -1616,15 +1624,6 @@
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
 		};
-		278E313D1D9D6534001C28F9 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				278E313E1D9D6534001C28F9 /* Tests.m */,
-				278E31401D9D6534001C28F9 /* Info.plist */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		27DB448A1D045537007E790B /* xpath */ = {
 			isa = PBXGroup;
 			children = (
@@ -1657,7 +1656,6 @@
 			children = (
 				270C67F11CDB4F1E00116E17 /* antlrcpp-ios */,
 				27874F221CCBB34200AF1C53 /* Linked Frameworks */,
-				278E313D1D9D6534001C28F9 /* Tests */,
 				37D727AB1867AF1E007B6D10 /* Products */,
 				276E5C0A1CDB57AA003FF4B4 /* runtime */,
 			);
@@ -1710,6 +1708,7 @@
 				276E5DA51CDB57AA003FF4B4 /* BlockEndState.h in Headers */,
 				276E5E831CDB57AA003FF4B4 /* ProfilingATNSimulator.h in Headers */,
 				276E5D991CDB57AA003FF4B4 /* BasicBlockStartState.h in Headers */,
+				27C375891EA1059C00B5883C /* InterpreterDataReader.h in Headers */,
 				276E5E9B1CDB57AA003FF4B4 /* RuleTransition.h in Headers */,
 				276E60031CDB57AA003FF4B4 /* ParseTreeProperty.h in Headers */,
 				276E5D8D1CDB57AA003FF4B4 /* ATNType.h in Headers */,
@@ -1859,6 +1858,7 @@
 				276E5E2B1CDB57AA003FF4B4 /* LL1Analyzer.h in Headers */,
 				27DB44BA1D0463DA007E790B /* XPathElement.h in Headers */,
 				276E5D7A1CDB57AA003FF4B4 /* ATNSerializer.h in Headers */,
+				27C375881EA1059C00B5883C /* InterpreterDataReader.h in Headers */,
 				276E5EAC1CDB57AA003FF4B4 /* SingletonPredictionContext.h in Headers */,
 				276E5E191CDB57AA003FF4B4 /* LexerPushModeAction.h in Headers */,
 				276E5ECA1CDB57AA003FF4B4 /* Transition.h in Headers */,
@@ -2035,6 +2035,7 @@
 				276E5E811CDB57AA003FF4B4 /* ProfilingATNSimulator.h in Headers */,
 				276E5D971CDB57AA003FF4B4 /* BasicBlockStartState.h in Headers */,
 				276E5E991CDB57AA003FF4B4 /* RuleTransition.h in Headers */,
+				27C375871EA1059C00B5883C /* InterpreterDataReader.h in Headers */,
 				276E60011CDB57AA003FF4B4 /* ParseTreeProperty.h in Headers */,
 				276E5D8B1CDB57AA003FF4B4 /* ATNType.h in Headers */,
 				276E5FFB1CDB57AA003FF4B4 /* ParseTreeListener.h in Headers */,
@@ -2225,7 +2226,7 @@
 		37D727A21867AF1E007B6D10 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = ANTLR;
 				TargetAttributes = {
 					270C67EF1CDB4F1E00116E17 = {
@@ -2238,10 +2239,11 @@
 			};
 			buildConfigurationList = 37D727A51867AF1E007B6D10 /* Build configuration list for PBXProject "antlrcpp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 37D727A11867AF1E007B6D10;
 			productRefGroup = 37D727AB1867AF1E007B6D10 /* Products */;
@@ -2284,6 +2286,7 @@
 				276E5F551CDB57AA003FF4B4 /* LexerNoViableAltException.cpp in Sources */,
 				2793DCB81F08099C00A84290 /* LexerAction.cpp in Sources */,
 				276E5E561CDB57AA003FF4B4 /* PlusBlockStartState.cpp in Sources */,
+				27C375861EA1059C00B5883C /* InterpreterDataReader.cpp in Sources */,
 				276E5E1D1CDB57AA003FF4B4 /* LexerSkipAction.cpp in Sources */,
 				276E5EBC1CDB57AA003FF4B4 /* StarLoopEntryState.cpp in Sources */,
 				276E5D721CDB57AA003FF4B4 /* ATNDeserializer.cpp in Sources */,
@@ -2437,6 +2440,7 @@
 				276E5F541CDB57AA003FF4B4 /* LexerNoViableAltException.cpp in Sources */,
 				2793DCB71F08099C00A84290 /* LexerAction.cpp in Sources */,
 				276E5E551CDB57AA003FF4B4 /* PlusBlockStartState.cpp in Sources */,
+				27C375851EA1059C00B5883C /* InterpreterDataReader.cpp in Sources */,
 				276E5E1C1CDB57AA003FF4B4 /* LexerSkipAction.cpp in Sources */,
 				276E5EBB1CDB57AA003FF4B4 /* StarLoopEntryState.cpp in Sources */,
 				276E5D711CDB57AA003FF4B4 /* ATNDeserializer.cpp in Sources */,
@@ -2590,6 +2594,7 @@
 				276E5DD01CDB57AA003FF4B4 /* ErrorInfo.cpp in Sources */,
 				2793DCB61F08099C00A84290 /* LexerAction.cpp in Sources */,
 				276E5F531CDB57AA003FF4B4 /* LexerNoViableAltException.cpp in Sources */,
+				27C375841EA1059C00B5883C /* InterpreterDataReader.cpp in Sources */,
 				276E5E541CDB57AA003FF4B4 /* PlusBlockStartState.cpp in Sources */,
 				276E5E1B1CDB57AA003FF4B4 /* LexerSkipAction.cpp in Sources */,
 				276E5EBA1CDB57AA003FF4B4 /* StarLoopEntryState.cpp in Sources */,
@@ -2835,18 +2840,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -2888,18 +2900,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;

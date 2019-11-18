@@ -73,7 +73,7 @@ public class Transition {
     /// The target of this transition.
     /// 
 
-    public final var target: ATNState
+    public internal(set) final var target: ATNState
 
     init(_ target: ATNState) {
 
@@ -82,8 +82,7 @@ public class Transition {
     }
 
     public func getSerializationType() -> Int {
-        RuntimeException(#function + " must be overridden")
-        fatalError()
+        fatalError(#function + " must be overridden")
     }
 
     /// 
@@ -100,12 +99,11 @@ public class Transition {
     }
 
 
-    public func labelIntervalSet() throws -> IntervalSet? {
+    public func labelIntervalSet() -> IntervalSet? {
         return nil
     }
 
     public func matches(_ symbol: Int, _ minVocabSymbol: Int, _ maxVocabSymbol: Int) -> Bool {
-        RuntimeException(#function + " must be overridden")
-        fatalError()
+        fatalError(#function + " must be overridden")
     }
 }
